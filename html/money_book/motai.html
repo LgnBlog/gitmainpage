@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+			<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style="text-align: center;background-color: #A6E1EC;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+						<h4 class="modal-title" id="myModalLabel">
+					本次收入支出情况<!--标题-->
+				</h4>
+					</div>
+					<div class="modal-body">
+						<!--	............-->
+						<!-- 准备一个面板 -->
+						<div class="panel panel-info">
+							<!--面板头-->
+							<div class="panel-heading">
+								<!-- 面板的标题 -->
+								<h3 class="panel-title text-center" style="height: 35px; line-height: 35px;">记一笔</h3>
+							</div>
+							<!-- 面板的身体 -->
+							<div class="panel-body" style="background-color: #D0E9C6;">
+								<!-- form 表单 -->
+								<form role="form">
+									<!-- form group 表单的组合 -->
+									<div class="form-group">
+										<!-- 输入框组 -->
+										<div class="input-group" style="margin-top: 25px;">
+											<!--span  input-->
+											<span class="input-group-addon">
+	    							<!-- 图标 span-->
+	    							<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+											<input type="text" class="form-control" placeholder="日期" onClick="new Calendar().show(this);" readonly="readonly" name="control_date" id="control_date" />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<div class="input-group" style="margin-top: 25px;">
+											<span class="input-group-addon">
+	    							<!-- 图标 span-->
+	    							<span class="glyphicon glyphicon-book"></span>
+											</span>
+											<select class="form-control" onchange="changeAcount(this)">
+												<option value="0" selected="selected">收入</option>
+												<option value="1">支出</option>
+
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<!-- 输入框组 -->
+										<div class="input-group" style="margin-top: 25px;">
+											<!--span  input-->
+											<span class="input-group-addon">
+	    							<!-- 图标 span-->
+	    							<span class="glyphicon glyphicon-inbox"></span>
+											</span>
+											<select class="form-control" id="types">
+
+											</select>
+										</div>
+										<div class="form-group">
+											<!-- 输入框组 -->
+											<div class="input-group" style="margin-top: 25px;">
+												<!--span  input-->
+												<span class="input-group-addon">
+	    							<!-- 图标 span-->
+	    							<strong>$&nbsp;</strong>
+	    						</span>
+												<input type="text" class="form-control" placeholder="金额" />
+											</div>
+										</div>
+										<div class="form-group">
+											<!-- 输入框组 -->
+											<div class="input-group" style="margin-top: 25px;">
+												<!--span  input-->
+												<span class="input-group-addon">
+	    							<!-- 图标 span-->
+	    							<span class="glyphicon glyphicon-user"></span>
+												</span>
+												<input type="text" class="form-control" placeholder="备注" />
+											</div>
+										</div>
+								</form>
+								</div>
+							</div>
+							<!--	............-->
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary">记一笔</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal -->
+				<script type="text/javascript" src="js/modol.js" ></script>
+	</body>
+</html>

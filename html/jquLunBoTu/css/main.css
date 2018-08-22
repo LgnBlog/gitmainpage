@@ -1,0 +1,44 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.box{
+	
+}
+.ig{
+	position: absolute; 
+}
+.but{
+	position: absolute;
+	height: 100px;
+	width: 60px;
+	background: rgba(0,0,0,0.5);
+	color: #f3f7e9;
+	font-size: 40px;
+	text-align: center;
+	line-height: 90px;
+    top: 260px;
+    display: none;
+}
+.but2{
+	left: 964px;
+}
+#tabs{
+	position: absolute;
+	top: 540px;
+	left: 400px;
+}
+.tab{
+	width: 30px;
+	height: 30px;
+	background-color: #5388e8;
+	float: left;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 100%;/*使得图标变成圆形*/
+	cursor: pointer;/*使得鼠标放上去之后是一个手形状*/
+}
+.bg{
+	background-color: red;
+}

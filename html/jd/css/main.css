@@ -1,0 +1,174 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #D4D8DD;
+    overflow-x: hidden;
+}
+. {	
+    overflow: scroll;
+    background-color: #f0f3ef;
+}
+#shortcut{
+	border-bottom: 1px solid #ddd;
+    background-color: #e3e4e5;
+	height: 30px;
+}
+#shortcut .w{
+	margin:auto;
+	width: 1190px;
+	height: 30px;
+}
+#shortcut li.spacer {
+    overflow: hidden;
+    margin: 11px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+}
+.w ul li{
+	list-style: none;
+	line-height: 30px;
+	font-size: 14px;
+	color: rgb(1,4,5,0.5);
+	margin-left: 5px;
+	cursor: pointer;
+}
+.w .lft li{
+	float: left;
+	margin-left: 200px;
+} 
+.w .rit{
+	float: right;
+}
+.w .rit li{
+	float: left;
+}
+#header{
+	width: 1190px;
+	height: 140px;
+	margin: auto;
+}
+#header .shopping{
+	position: relative;
+	top: 45px;
+    left: 950px; 
+}
+#header .logo{
+	position: absolute;
+	top: 0px;
+}
+
+#header .fond{
+	top: 38px;
+	left: -348px;
+	position: relative;
+	float: right;
+	text-align: center;
+}
+#header .fond input{
+	top: -1px;
+
+    float: left;
+
+	position: relative;
+	
+	height: 33px;
+	
+	width: 400px;
+	
+	border: 0px;
+}
+.navitems{
+	position: relative;
+	top: 90px;
+	left: 415px;
+}
+.navitems li{
+	cursor: pointer;
+	font-size: 14px;
+	color: #635959;
+	list-style: none;
+	float: left;
+}
+.navitems .spacer{
+	overflow: hidden;
+    margin: 5px 5px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #c27a7a;
+}
+#header .fond img{
+	border: 0px;
+}
+#content{
+	height: 630px;
+	width: 1190px;
+	background: #eef1f5;
+	margin: auto;
+}
+#content .left{
+	width: 188px;
+	height: 630px;
+	background-color: #fff;
+	margin-left: 4px;
+}
+#content .left ul{
+	
+	margin-left: 10px;
+}
+#content .left li{
+	list-style: none;
+	font-size: 14px;
+	color: #635959;
+}
+#content .left .nofirst{
+	margin-top: 10px;
+}
+#content .center{
+	width: 800px;
+	height: 620px;
+	background-color: #D7E4E9;
+	margin: 5px;
+}
+#content .right{
+	width: 186px;
+	height: 620px;
+	background: #FFFFFF;
+}
+#content .inline{
+	float: left;
+	position: relative;
+}
+#floors{
+	height: 60px;
+	border-top: 1px solid #ddd;
+    background-color: #cdd6e0;
+}
+#floors hr{
+	width: 100%;
+	height: 1px;
+	margin-top: 5px;
+	color: #F0EAEA;
+}
+#floors .finaly{
+	height: 90px;
+	width: 1190px;
+	margin:0px auto;
+	line-height: 60px;
+	text-align: center;
+}
+#floors .finaly li{
+	display: inline;
+	list-style: none;
+	
+}
+#floors .finaly .spacer{
+	overflow: hidden;
+    margin: 30px 8px 0;
+    width: 1px;
+    height: 10px;
+    background-color: #c27a7a;
+    
+}

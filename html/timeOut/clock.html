@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>时钟</title>	
+	<style type="text/css">
+		#date{
+			font-size: 60px;
+			font-family:Tahoma, Geneva, sans-serif;
+			color:rgba(203,29,77,.5);
+			text-shadow:-5px -5px rgba(70,232,240,.5);
+		}
+		#time{
+			font-size: 50px;
+			background-color:#000;
+			color:transparent;
+			text-shadow:0 0 5px #FFFF66,1px 1px 1px #fff,-1px -1px 1px #fff,0 0 10px #FFFF99,0 0 20px #B9EB50;
+
+		}
+		.box{
+			margin: auto;
+			text-align: center;
+			width: 900px;
+			height: 800px;
+			background-color: #ccc;
+			border-radius: 100px
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<h2 id="date"></h2><br>
+	<h1 id="time"></h1>
+	</div>
+	<!-- <input type="button" value="当前时间" onclick="showDateTime()"> -->
+   <script type="text/javascript" src="clock.js"></script>
+</body>
+</html>

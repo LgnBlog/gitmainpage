@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--		***************************-->
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseone">
+					账单
+				</a>
+			    </h4>
+				</div>
+				<div id="collapseone" class="panel-collapse collapse">
+					<div class="panel-body">
+						Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseTwo">
+					报表
+				</a>
+			    </h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+					<div class="panel-body">
+						Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseThree">
+					收支类型管理
+				</a>
+			</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse">
+					<div class="panel-body">
+						<a class="detail">收支管理</a><br />
+						<a class="detail">收支管理</a>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseFour">
+					个人中心
+				</a>
+			</h4>
+				</div>
+				<div id="collapseFour" class="panel-collapse collapse">
+					<div class="panel-body">
+						Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('#collapseFour').collapse({
+					toggle: false
+				})
+			});
+			$(function() {
+				$('#collapseTwo').collapse('hide')
+			});
+			$(function() {
+				$('#collapseThree').collapse('hide')
+			});
+			$(function() {
+				$('#collapseOne').collapse('hide')
+			});
+		</script>
+
+		<!--		***************************-->
+		<script type="text/javascript" src="js/detail.js"></script>
+	</body>
+
+</html>
