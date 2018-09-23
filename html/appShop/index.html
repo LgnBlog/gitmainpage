@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>展示主页</title>
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width, viewport-fit=cover" />
+		<meta name="keywords" content=" home,case"/>
+		<meta name="description"  content="来这里保证你有收获"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+	</head>	
+	<body>
+		<div id="app">
+			<nav >
+				<div class="nav-box">
+					<div class="sidebar" @click="search"><img src="img/a.png"/></div>
+					<div class="search-shop">
+						<li ><img src="img/2.png"/></li>
+						<li><img src="img/3.png"/></li>
+					</div>
+					<input type="text" name=""  placeholder="搜索"  />
+				</div>
+			</nav>
+			<div class="roll-img " ><img src="img/b.png"/></div>
+			<div class="activty-area">
+				<div class="activty-text">
+					<div class="act-left">活动专区</div>
+					<div class="act-right">更多></div>
+				</div>
+				<div class="activty-img">
+					<div class="img-box">
+						<img src="img/c.png"/>
+					    <img src="img/d.png" />
+					</div>
+				</div>
+			</div>
+			<div class="show-area">
+				<div class="activty-text">
+					<div class="act-left">DIY</div>
+					<div class="act-right">更多></div>
+				</div>
+				<div class="activty-img">
+					<div class="showimg-box">
+						<div class="a-box">
+							<img src="img/e.png"/>
+						    <div class="show-text">心动不如行动，专为你定制</div>
+						</div>
+						<div class="a-box">
+							<img src="img/e.png"/>
+						    <div class="show-text">心动不如行动，专为你定制</div>
+						</div>
+						<div class="a-box">
+							<img src="img/e.png"/>
+						    <div class="show-text">心动不如行动，专为你定制</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="foot">
+				<div class="foot-box">
+					<div class="foot-con">
+						<img src="img/首页.png"/><div>首页</div>
+					</div>
+				</div>
+				<div class="foot-box">
+					<div class="foot-con">
+						<img src="img/钻石.png"/><div>钻石</div>
+					</div>
+				</div>
+				<div class="foot-box">
+					<div class="foot-con">
+						<img src="img/DIY.png"/><div>DIY</div>
+					</div>
+				</div>
+				<div class="foot-box">
+					<div class="foot-con">
+						<img src="img/首页.png"/><div>定制</div>
+					</div>
+				</div>
+				<div class="foot-box">
+					<div class="foot-con">
+						<img src="img/定制.png"/><div>定制</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-pop" v-if="sid" >
+				<div class="off" v-on:click="search">X</div>
+				<ul>
+					<li>收藏</li>
+					<li>商城活动</li>
+					<li>购物车</li>
+					<li>我的购物</li>
+					<li>我的足迹</li>
+					<li>我的购物</li>
+				</ul>
+			</div>
+		    <div class="shadow" v-if="sid">
+		    	
+		    </div>
+		</div>
+		<script>
+			new Vue({
+					  el: '#app',
+					  data: {
+							    sid:  false,
+							  },
+					  methods: {
+					    search: function (message) {
+					    	   this.sid=!this.sid
+					    }
+					  }
+					})
+		</script>
+	</body>
+</html>
