@@ -138,7 +138,7 @@ body{
 	background-color: #21b5a9;
 }
 .foot .foot-con{
-	width: 42%;
+	width: 43%;
 	height: 100%;
 	margin: 0px auto;
 }
@@ -150,31 +150,42 @@ body{
 .foot img{
 	width: 100%;
 	height: 30px;
-	margin-top: 8px;
+	margin-top: 8px;	
 }
-.sidebar-pop{
+#sidba{
+	position: absolute;
+	top: 60px;
+	width: 150px;
+	height: 250px;
+	margin-left: -150px;
+	transition:  8s;
+}
+#sidebar-pop{
 	position: fixed;
 	top: 60px;
 	width: 150px;
 	height: 250px;
 	background-color: #908F89;
 	z-index: 2;
+	margin-left: -150px;
+	transition:  0.5s;
 }
-.sidebar-pop li:first-child{
+#sidebar-pop li:first-child{
 	margin-top: 30px;
 }
-.sidebar-pop li{
+#sidebar-pop li{
 	height: 30px;
 	list-style: none;
 	padding-left:10px;
 	cursor: pointer;
 }
-.sidebar-pop li:hover{
+#sidebar-pop li:hover{
 	background-color: darkgray;
 }
 .off{
 	width: 20px;
 	height: 20px;
+	color: #e0e0db;
 	cursor: pointer;
 	position: absolute;
 	font-size: 20px;
@@ -182,8 +193,8 @@ body{
 	right: 5px;
 }
 .shadow{
-	position: absolute;
-	top: 0px;
+	position: fixed;
+	top: 60px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;

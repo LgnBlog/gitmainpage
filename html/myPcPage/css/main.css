@@ -24,6 +24,7 @@ nav{
 header .navImg img{
       position: absolute;
       top: 0px; right: calc(50% - 90px);
+      z-index: 1;
 }
 nav li{
 	list-style: none;
@@ -49,6 +50,7 @@ nav .secendUl li{
 .headImg img{
 	width: 100%;
 	height: 500px;
+	position: absolute;
 }
 .sowImgs{
 	width: 100%;
@@ -149,27 +151,32 @@ article{
     height: 150px;
     margin-top: 170px;
      cursor: pointer;
+     transition: 0.8s;
+     -moz-transition: 0.8s;
+}
+.mypageBox .myText:hover{
+	transform: scale(1.2, 1.2);
 }
 .mypageBox h2{
 	color: #00FFFF;
 	text-shadow: 1px 2px #d040a7;
 }
-.myText .minTitle{
+.mypageBox .minTitle{
 	line-height: 30px;
     padding-left: 30px;
     color: #F6F6F6;
     text-shadow: 1px 2px 1px #120c13;
 }
-.myText p{
+.mypageBox p{
 	line-height: 20px;
     padding-left: 30px;
     color: #0e0d0d;
     text-shadow: 1px 1px 1px #e7f3e7;
 }
-.myText ul{
+.mypageBox ul{
 	margin-top: 150px;
 }
-.myText  li{
+.mypageBox  li{
 	float: right;
 	list-style: none;
 	cursor: pointer;
@@ -285,4 +292,26 @@ footer{
 	margin: 0px auto;
 	line-height: 40px;
 	text-align: center;
+}
+/*轮播图*/
+.headImg img{
+	  animation: marginLeft 7s infinite;
+}
+@keyframes marginLeft{
+    0%{margin-left: 0;}
+    28.5%{margin-left: 0;}
+    33.3%{margin-left: -1905px;}
+    62%{margin-left: -1905px;}
+    66.7%{margin-left: -3810px;}
+    95.2%{margin-left: -3810px;}
+    100%{margin-left: 0;}
+}
+.one{
+	margin-left: 0px;
+}
+.two{
+	margin-left: 1905px;
+}
+.three{
+	margin-left: 3810px;
 }

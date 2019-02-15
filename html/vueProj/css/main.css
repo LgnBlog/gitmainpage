@@ -1,0 +1,261 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+#firstpage_box{
+	margin: 0px;
+	padding: 0px;
+	background-color: #151414;
+}
+.header{
+	height: 200px;
+	width: 100%;
+}
+.logo img{
+	float: left;
+	margin: 20px;
+	width: 80px;
+	height: 80px;
+}
+.nav{
+	height: 50px;
+	width: 100%;	
+	font-size: 14px;
+	color: aliceblue;
+}
+.nav >ul{
+	float: right;
+	margin-top: 15px;
+}
+.nav>ul ul{
+	float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.nav >ul>li:last-child{
+	margin-right: 100px;
+}
+.nav >ul>li{
+	width: 130px;
+	height: 100%;
+	float: left;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.nav >ul>li>img{
+	float: left;
+	margin: 10px 0px;
+}
+.nav-line{
+	height: 1px;
+	width: 20px;
+	background-color: #8bca46;
+}
+.menu{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	box-shadow: -3px 5px 8px -2px #b1aeac;
+	cursor: pointer;
+	z-index: 2;
+}
+.menu-two{
+	position: absolute;
+	right: 10px;
+	top: 135px;
+	box-shadow: -3px 5px 8px -2px #FFFFFF;
+	cursor: pointer;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	z-index: -1;
+}
+.menu:hover+.menu-two{
+	top: 10px;
+	z-index: 1;
+}
+.con{
+	width: 100%;
+	height: 743px;
+}
+.con .contect{
+	float: left;
+	margin-top: 600px;
+}
+.contect li{
+	cursor: pointer;
+	position: relative;
+}
+.contect img{
+	position: relative;
+	vertical-align: middle;
+	margin-top: 1px;
+	z-index: 1;
+}
+.contect span{
+	color: #F0F8FF;
+	background-color: #606060;
+	width: 80px;
+	display: inline-block;
+	height: 28px;
+	padding-top: 2px;
+	position: absolute;
+    top: 1px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+.contect li:first-child span{
+	background-color: #8bca46;	
+}
+.slip-mouse ul{
+	float: right;
+	margin-top: 280px;
+	margin-right: 20px;
+}
+.slip-mouse li{
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+.mouse {
+	position: absolute;
+	right: 7px;
+    top: 590px;
+}
+.con-box{
+	height: 100%;
+	width: 1190px;
+	margin: 0px auto;
+	text-align: center;
+}
+.con-box li:nth-child(2){
+  margin-top: -2px;
+}
+.con-box li:nth-child(3){
+  font-size: 72px;
+  color: #8bca46;
+  text-shadow: 3px 2px 2px #dce1dc;
+}
+.con-box li:nth-child(3) span{
+	color: #453f40;
+	font-weight: 600;
+	-webkit-text-stroke: 2px #8bca46;
+    text-shadow: 1px 1px 1px #e2f72d;
+}
+.con-box li:nth-child(3) img{
+  margin: 0px 20px 20px;
+}
+.con-box li:nth-child(4){
+	margin-top: 50px;
+	color: #cecece;
+	letter-spacing: 5px;
+  font-size: 20px;
+}
+.con-box li:nth-child(5){
+   font-size: 24px;
+   color: #cfcfcf;
+   font-weight: 600;
+   margin-top: 10px;
+   letter-spacing: 10px;
+}
+.con-box li:nth-child(6){
+   font-size: 6px;
+   color: #8bca46;
+   margin-top: 220px;
+}
+.foot{
+	height: 50px;
+	width: 100%;
+	color: #aba5a5;
+}
+.friengly-link{
+	float: left;
+}
+.friengly-link li{
+	float: left;
+    font-size: 13px;
+    cursor: pointer;
+}
+.friengly-link li:first-child{
+	cursor: auto; 
+}
+.friengly-link li {
+	width: 90px;
+	height: 45px;
+	text-align: center;
+	position: relative;
+	line-height: 45px;
+	margin-left: 10px;
+}
+.friengly-link li span{
+	position: absolute;
+	background-color: #3fb560;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.copyright{
+	float: right;
+	margin-top: 12px;
+	margin-right: 50px;
+}
+/*动画*/
+.con-box li:nth-child(6){
+   -webkit-animation:marginTop 2s ;
+   -webkit-animation-fill-mode:forwards;
+}
+@keyframes marginTop{
+    0%{margin-top: 200px;font-size: 6px; color: #8BCA46;}
+    100%{margin-top: 40px;font-size: 24px;color: #E2F72D;text-shadow: 2px 2px 2px yellowgreen;}
+}
+.nav >ul>li:hover{
+	-webkit-animation:tiaoDong 1s infinite ;
+}
+@keyframes tiaoDong{
+	0% {transform: scale(1.2,1.2);}
+	10% {transform: scale(1,1);}
+	25% {transform: scale(1.2,1.2);}
+	50% {transform: scale(1,1);}
+	70% {transform: scale(1.2,1.2);}
+	100% {transform: scale(1,1);}
+}
+/*联系滑动动画*/
+.active{
+	transform: translateX(-90px);
+	transition: 0.5s;
+}
+/*底部动画*/
+.line-a{
+	left: 0;
+    top: 0;
+	width: 0%;
+	height: 2px;
+}
+.line-b{
+	right: 0;
+	top: 0;
+	width: 2px;
+	height: 0%;
+}
+.line-c{
+	right: 0;
+	bottom: 0;
+	width: 0%;
+	height: 2px;
+	}
+.line-d{
+	left: 0;
+	bottom: 0;
+	width: 2px;
+	height: 0%;	
+}
+.friengly-link li:hover .line-a, .friengly-link li:hover .line-c{
+	width: 100%;
+}
+.friengly-link li:hover .line-b, .friengly-link li:hover .line-d{
+	height: 100%;
+}

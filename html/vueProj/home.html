@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/home.css" />
+		<title>home</title>
+	</head>
+
+	<body>
+		<div id="home_box">
+			<ul>
+				<li>
+					<div class="a">
+						<img src="img/homeImg/首页.png" />
+						<div></div>
+						<div>HOME</div>
+						<div>牛牛首页</div>
+						<div></div>
+						<span class="line-a"></span>
+						<span class="line-b"></span>
+						<span class="line-c"></span>
+						<span class="line-d"></span>
+					</div>
+				</li>
+				<table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1840px;">
+					<colgroup>
+						<col name="el-table_1_column_1" width="100">
+						<col name="el-table_1_column_2" width="385">
+						<col name="el-table_1_column_3" width="385">
+						<col name="el-table_1_column_4" width="385">
+						<col name="el-table_1_column_5" width="385">
+						<col name="el-table_1_column_6" width="200">
+						<col name="gutter" width="0">
+					</colgroup>
+					<thead class="has-gutter">
+						<tr class="">
+							<th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
+								<div class="cell">排序</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
+								<div class="cell">商品名称</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
+								<div class="cell">商品主图</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
+								<div class="cell">商品价格</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
+								<div class="cell">创建时间</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_6     is-leaf">
+								<div class="cell">操作</div>
+							</th>
+							<th class="gutter" style="width: 0px; display: none;"></th>
+						</tr>
+					</thead>
+					<tr class="">
+							<td colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
+								<div class="cell">排序</div>
+							</td>
+							<td colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
+								<div class="cell">商品名称</div>
+							</td>
+							<td colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
+								<div class="cell">商品主图</div>
+							</td>
+							<td colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
+								<div class="cell">商品价格</div>
+							</td>
+							<td colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
+								<div class="cell">创建时间</div>
+							</td>
+							<td colspan="1" rowspan="1" class="el-table_1_column_6     is-leaf">
+								<div class="cell">操作</div>
+							</td>
+							<td class="gutter" style="width: 0px; display: none;"></td>
+						</tr>
+				</table>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+
+</html>
+...................................
+<!-- 金币商品 -->
+<template>
+	<div id="coinGoods">
+		<v-breadcrumb firstMenu="会员管理" secondMenu="金币商品"></v-breadcrumb>
+		<div class="nav row">
+			<div class="col-md-12">
+				<div class="portlet box red">
+					<div class="portlet-title">
+						<div class="caption">金币商品</div>
+					</div>
+					<div class="portlet-body">
+						<div class="">
+							<el-button type="primary" class="btn btn-success" @click="handleAdd">新增</el-button>
+						</div>
+						<div class="table-scrollable">
+							<el-table :data="tableData">
+								<el-table-column prop="orders" label="排序" width="100" align="center"> </el-table-column>
+								<el-table-column prop="proTitle" label="商品名称" align="center"></el-table-column>
+								<el-table-column prop="imgPath" label="商品主图" align="center">
+									<template slot-scope="scope">
+										<img :src="scope.row.imgPath" width="60px" height="60px" />
+									</template>
+								</el-table-column>
+								<el-table-column prop="productPrice" label="商品价格" align="center"> </el-table-column>
+								<el-table-column prop="productIntegral" label="赠送积分" align="center"> </el-table-column>
+								<el-table-column prop="createTime" label="创建时间" align="center"> </el-table-column>
+								<el-table-column prop="" label="操作" width="200">
+									<template slot-scope="scope">
+										<span class="btn default btn-xs purple" @click="handleAc(scope.row)">修改 </span>
+										<span class="btn default btn-xs blue" @click="handleOn(scope.row)">
+											<template v-if="scope.row.shelfStatus == 0">上架</template>
+											<template v-if="scope.row.shelfStatus == 1">下架</template>
+										</span>
+										<span class="btn default btn-xs red" @click="handleDelete(scope.row)">删除 </span>
+									</template>
+								</el-table-column>
+							</el-table>
+							<el-pagination layout="prev, pager, next" v-if="total > pageSize" :page-size="pageSize" :current-page="pageNum" :total="total" @current-change="handlePaging"></el-pagination>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+	import breadcrumb from '@/components/tool/breadcrumb' //面包屑
+	export default {
+		name: 'coinGoods', // 金币商品
+		components: {
+			'v-breadcrumb': breadcrumb
+		},
+		data() {
+			return {
+				tableData: [],
+				total: 0,
+				pageNum: 1,
+			}
+		},
+		created() {
+
+		},
+		mounted() {
+			this.$nextTick(function() {
+				this.getList();
+			});
+		},
+		methods: {
+			//获取礼包商品列表
+			getList() {
+				var params = {
+						memberLevels: this.activeTab,
+						pageSize: this.pageSize,
+						pageNum: this.pageNum
+					},
+					reqUrl = this.baseUrl + '/memberShop/listProduct';
+				//  		this.$http.get(reqUrl, {params:params}).then((res) => {
+				//  			if (!res) { return; }
+				//  			this.total = res.total;
+				//  			this.tableData = res.memberShops;
+				//  		})
+			},
+			//分页
+			handlePaging(_currentPage) {
+				this.pageNum = _currentPage;
+				this.getList();
+			},
+			//去新增
+			handleAdd() {
+				var query = {};
+				this.$router.push({
+					path: '/manageCoinGoods',
+					query: query
+				})
+			},
+			//去修改
+			handleAc(item) {
+				var that = this;
+				this.$prompt('请输入排序', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					inputPattern: /\S{1,}/,
+					inputErrorMessage: '请输入排序'
+				}).then(function({
+					value
+				}) {
+					var reqUrl = that.baseUrl + '/memberShop/addOrUpdate',
+						params = {
+							orders: value,
+							id: item.id
+						}
+					that.$http.post(reqUrl, params).then((res) => {
+						if(!res) {
+							return;
+						}
+						that.$message({
+							type: 'success',
+							message: '修改成功'
+						});
+						that.getList();
+					});
+				}).catch(function() {});
+			},
+			//上架/下架
+			handleOn(item) {
+				var str = '';
+				item.shelfStatus == '0' ? str = '确认上架吗？' : str = '确认下架吗？';
+				this.$confirm(str, '提示', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					type: 'warning'
+				}).then(() => {
+					this.deleteData(item, 'on');
+				}, function() {});
+			},
+			//删除
+			handleDelete(item) {
+				this.$confirm('确定删除?', '提示', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					type: 'warning'
+				}).then(() => {
+					this.deleteData(item, 'delete');
+				}, function() {});
+			},
+			deleteData(item, name) {
+				var reqUrl = this.baseUrl + '/memberShop/updateStatus',
+					params = {
+						orders: item.orders,
+						id: item.id
+					}
+				if(name == 'on') {
+					params.operationType = '1';
+					if(item.shelfStatus == '0') { //操作下架商品
+						params.shelfStatus = '1';
+					} else {
+						params.shelfStatus = '0';
+					}
+				} else {
+					params.operationType = '2';
+					params.deleteStatus = '0'
+				}
+				this.$http.post(reqUrl, params).then((res) => {
+					if(!res) {
+						return;
+					}
+					this.$message({
+						type: 'success',
+						message: '操作成功'
+					});
+					this.getList();
+				});
+			},
+		}
+
+	}
+</script>
+<!-- 增加 "scoped" 属性 限制 CSS 属于当前部分 -->
+<style scoped>
+	@import url("./css/vip.css");
+</style>
+/////////////////////////
+ getGodosDetail() {
+    		var that = this,
+        		reqUrl = this.baseUrl + '/goldShop/addOrUpdate',
+        		params = { 
+        			productCode: this.goods.productCode,
+        			memberLevels: this.query.type
+        		};
+        		this.$http.post(reqUrl, params).then(function(res) {
+                if (!res) { return; }
+                that.goods = res.goldShopSkuModels;
+          	})
+    	},

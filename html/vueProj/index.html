@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="js/vue2.main.js"></script>
+		<title>首屏</title>
+	<!--	<style>
+			.active {
+						left: 30px;
+					}
+		</style>-->
+	</head>
+	<body>
+		<div id="firstpage_box">
+			<div class="header">
+				<div class="logo"><img src="img/Logo1.png"/></div>
+				<div class="nav">
+					<ul>
+						<li v-for="item in 4">
+							<img src="img/首页.png"/>
+							<ul>
+								<li>HOME2</li>
+								<li class="nav-line"></li>
+								<li>Aisure</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="menu"><img src="img/menu.png"/></div>
+				<div class="menu-two"><img src="img/menu.png"/></div>
+			</div>
+			<div class="con">
+				<div class="contect">
+					<ul>
+						<li ><img src="img/q2q联系客服.png" @mouseover="search" @mouseout="search"/><span  v-bind:class="{ active: isActive }">联系客服</span></li>
+						<li ><img src="img/提交需求.png" @mouseover="searcha" @mouseout="searcha"/><span v-bind:class="{ active: isActivea }">提交需求</span></li>
+					</ul>
+				</div>
+				<div class="slip-mouse">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<div class="mouse">
+							<img src="img/xmouse.png"/>
+						</div>
+					</ul>
+				</div>
+				<div class="con-box">
+					<ul>
+						<li><img src="img/Logo1.png"/></li>
+						<li><img src="img/Logo1 副本.png"/></li>
+						<li>Aisure<img src="img/图层 3.png"/><span>视觉设计</span></li>	
+						<li >更专业的设计开发团队</li>
+						<li>打造你前所未想的高度网站</li>
+						<li><a> www.baidu.com</a></li>	
+					</ul>
+				</div>
+			</div>
+			<div class="foot">
+				<div class="friengly-link">
+						<li>友情链接：</li>
+						<li>站酷网
+							<span class="line-a"></span>
+							<span class="line-b"></span>
+							<span class="line-c"></span>
+							<span class="line-d"></span>
+						</li>
+						<li>优忆课
+							<span class="line-a"></span>
+							<span class="line-b"></span>
+							<span class="line-c"></span>
+							<span class="line-d"></span>
+						</li>
+						<li>网页设计联盟
+							<span class="line-a"></span>
+							<span class="line-b"></span>
+							<span class="line-c"></span>
+							<span class="line-d"></span>
+						</li>
+						<li>198网络科技
+							<span class="line-a"></span>
+							<span class="line-b"></span>
+							<span class="line-c"></span>
+							<span class="line-d"></span>
+						</li>
+				</div>
+				<div class="copyright">
+					<small>Copyright 2018-9-26 wri-lgn 视觉设计</small>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			new Vue({
+					  el: '#firstpage_box',
+					  data: {
+					  	isActive: true,
+					  	isActivea: true
+							 },
+					  methods: {
+					    search: function (message) {
+					    	   this.isActive=!(this.isActive);
+					    },
+					    searcha: function (message) {
+					    	   this.isActivea=!this.isActivea;
+					    }
+					  }
+					  
+					})
+		</script>
+	</body>
+
+</html>
